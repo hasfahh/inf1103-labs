@@ -23,3 +23,13 @@ while True:
 
     # Convert valid input to integer
     stock = int(stock_input)
+
+     # Add stock to inventory
+    inventory += stock
+
+    print("Current Inventory:", inventory)
+
+    # Check for overstock
+    if inventory > 500:
+        print("ALERT: Inventory has exceeded 500 units!")
+        break
