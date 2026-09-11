@@ -32,6 +32,7 @@ while True:
 
     # Check for overstock
     if inventory > 500:
-        print("ALERT: Inventory has exceeded 500 units!")
+        print("ALERT: Inventory has exceeded maximum capacity of 500 units!")
         break
-
+    elif inventory >= 400:
+        print("WARNING: inventory is nearing maximum capacity:")
