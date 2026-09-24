@@ -22,6 +22,8 @@ def get_valid_input():
         # Convert valid input to integer
         return int(stock_input)
 
+def process_delivery(current_total, new_value):
+    new_total = current_total + new_value
+    return new_total
 
-value = get_valid_input()
-print(value)
+print(process_delivery(100, 50))
