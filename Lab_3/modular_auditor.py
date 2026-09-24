@@ -30,4 +30,8 @@ def calculate_tax(amount):
     tax = amount * 0.10
     return tax
 
-print(calculate_tax(50))
+def generate_report(total_units, failed_attempts):
+    print("Total Units Processed:", total_units)
+    print("Number of Failed/Rejected Entries:", failed_attempts)
+
+generate_report(150, 2)
