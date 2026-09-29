@@ -1,6 +1,5 @@
 # Initialize inventory and failed entries
-inventory = 0
-failed_entries = 0
+
 
 def load_inventory():
     try:
@@ -56,7 +55,13 @@ def generate_report(total_units, failed_attempts):
     print("Number of Failed/Rejected Entries:", failed_attempts)
 
 
+
+
 # Main program loop
+
+inventory, transaction_history = load_inventory()
+failed_entries = 0
+
 while True:
     stock = get_valid_input()
 
@@ -72,9 +77,12 @@ while True:
     # Process valid delivery
     inventory = process_delivery(inventory, stock)
 
+    transaction_history.append(stock)
+
     # Calculate tax for this delivery
     tax = calculate_tax(stock)
-
+    
+    print("Transaction History:", transaction_history)
     print("Current Inventory:", inventory)
     print("Tax for this delivery:", tax)
 
