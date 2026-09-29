@@ -21,6 +21,10 @@ def load_inventory():
     except FileNotFoundError:
         return 0, []
 
+def save_inventory(total, history):
+    with open("inventory.txt", "w") as file:
+        file.write(str(total) + "\n")
+        file.write(",".join(str(value) for value in history))
 
 def get_valid_input():
     while True:
@@ -67,6 +71,7 @@ while True:
 
     # Check if user wants to quit
     if stock == "quit":
+        save_inventory(inventory, transaction_history)
         break
 
     # Check if input was rejected
@@ -82,7 +87,6 @@ while True:
     # Calculate tax for this delivery
     tax = calculate_tax(stock)
     
-    print("Transaction History:", transaction_history)
     print("Current Inventory:", inventory)
     print("Tax for this delivery:", tax)
 
