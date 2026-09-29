@@ -2,6 +2,26 @@
 inventory = 0
 failed_entries = 0
 
+def load_inventory():
+    try:
+        with open("inventory.txt", "r") as file:
+            lines = file.readlines()
+
+        if not lines:
+            return 0, []
+
+        total = int(lines[0].strip())
+
+        history = []
+
+        if len(lines) > 1 and lines[1].strip():
+            history = [int(value) for value in lines[1].strip().split(",")]
+
+        return total, history
+
+    except FileNotFoundError:
+        return 0, []
+
 
 def get_valid_input():
     while True:
