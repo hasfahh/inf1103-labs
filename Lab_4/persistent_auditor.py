@@ -1,6 +1,3 @@
-# Initialize inventory and failed entries
-
-
 def load_inventory():
     try:
         with open("inventory.txt", "r") as file:
