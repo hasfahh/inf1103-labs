@@ -1,4 +1,7 @@
-inventory = [
+import json
+import os
+
+initial_inventory = [
     {
         "id": "P001",
         "name": "Laptop",
@@ -19,4 +22,16 @@ inventory = [
     }
 ]
 
-print(inventory)
+
+def load_inventory():
+    if os.path.exists("inventory.json"):
+        with open("inventory.json", "r") as file:
+            inventory = json.load(file)
+
+        print("inventory.json found.")
+        print("Inventory loaded successfully.")
+        return inventory
+
+    return []
+
+inventory = load_inventory()
