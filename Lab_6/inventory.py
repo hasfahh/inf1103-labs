@@ -36,3 +36,14 @@ class Inventory:
             product.update_stock(quantity)
         else:
             print("Product not found.")
+
+    def to_dict(self):
+        return {
+            "id": self.__product_id,
+            "name": self.__name,
+            "price": self.__price,
+            "stock": self.__stock
+        }
+
+    def get_all_products(self):
+        return self.__products

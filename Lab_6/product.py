@@ -24,4 +24,10 @@ class Product:
     def get_product_id(self):
         return self.__product_id
 
-laptop = Product("P001", "Laptop", 1200.00, 15)
+    def to_dict(self):
+        return {
+            "id": self.__product_id,
+            "name": self.__name,
+            "price": self.__price,
+            "stock": self.__stock
+        }
