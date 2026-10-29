@@ -21,4 +21,7 @@ class Product:
             f"Stock: {self.__stock}"
         )
 
+    def get_product_id(self):
+        return self.__product_id
+
 laptop = Product("P001", "Laptop", 1200.00, 15)
