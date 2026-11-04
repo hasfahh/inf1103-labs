@@ -2,31 +2,17 @@
     {
         "id": "P001",
         "name": "Laptop",
-        "price": 1200.0,
-        "stock": 15
+        "price": 1200,
+        "stock": 15,
+        "type": "physical",
+        "weight": 2.2
     },
     {
-        "id": "P002",
-        "name": "Mouse",
-        "price": 25.5,
-        "stock": 40
-    },
-    {
-        "id": "P003",
-        "name": "Keyboard",
-        "price": 45.0,
-        "stock": 25
-    },
-    {
-        "id": "P004",
-        "name": "Monitor",
-        "price": 299.99,
-        "stock": 30
-    },
-    {
-        "id": "P005",
-        "name": "Thumbdrive",
-        "price": 35.0,
-        "stock": 999
+        "id": "D001",
+        "name": "Antivirus Licence",
+        "price": 59.99,
+        "stock": 100,
+        "type": "digital",
+        "download_size": 350
     }
 ]
