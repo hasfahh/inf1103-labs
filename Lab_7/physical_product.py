@@ -2,8 +2,6 @@ from product import Product
 from can_be_shipped import CanBeShipped
 
 class PhysicalProduct(Product, CanBeShipped):
-    BASE_SHIPPING_FEE = 5.00
-    COST_PER_KG = 2.00
     def __init__(self, product_id, name, price, stock, weight):
         super().__init__(product_id, name, price, stock)
         self.__weight = weight
@@ -12,14 +10,14 @@ class PhysicalProduct(Product, CanBeShipped):
         super().display_information()
         print(f"    Type: Physical | Weight: {self.__weight:.2f} kg")
 
+    def get_fulfilment_info(self):
+        return "This product requires physical shipping."
+
+    def calculate_shipping_cost(self):
+        return 5.00 + (self.__weight * 2.00)
+
     def to_dict(self):
         data = super().to_dict()
         data["type"] = "physical"
         data["weight"] = self.__weight
         return data
-
-    def get_fulfilment_info(self):
-        return "This product requires physical shipping."
-
-    def calculate_shipping_cost(self):
-       return self.BASE_SHIPPING_FEE + (self.__weight * self.COST_PER_KG)
