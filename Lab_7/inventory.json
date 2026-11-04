@@ -14,5 +14,21 @@
         "stock": 100,
         "type": "digital",
         "download_size": 350
+    },
+    {
+        "id": "P100",
+        "name": "Guitar",
+        "price": 350.0,
+        "stock": 10,
+        "type": "physical",
+        "weight": 4.5
+    },
+    {
+        "id": "D100",
+        "name": "Operating System",
+        "price": 199.99,
+        "stock": 100,
+        "type": "digital",
+        "download_size": 5200.0
     }
 ]
