@@ -24,5 +24,18 @@
         },
         "type": "digital",
         "download_size": 350
+    },
+    {
+        "id": "P002",
+        "name": "Thumbdrive",
+        "price": 20.0,
+        "stock": 1200,
+        "supplier": {
+            "id": "S001",
+            "name": "TechSupplies Ltd",
+            "email": "sales@techsupplies.com"
+        },
+        "type": "physical",
+        "weight": 0.2
     }
 ]
