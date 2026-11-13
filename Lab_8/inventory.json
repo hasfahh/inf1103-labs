@@ -4,6 +4,11 @@
         "name": "Laptop",
         "price": 1200,
         "stock": 15,
+        "supplier": {
+            "id": "S001",
+            "name": "TechSupplies Ltd",
+            "email": "sales@techsupplies.com"
+        },
         "type": "physical",
         "weight": 2.2
     },
@@ -12,23 +17,12 @@
         "name": "Antivirus Licence",
         "price": 59.99,
         "stock": 100,
+        "supplier": {
+            "id": "S001",
+            "name": "TechSupplies Ltd",
+            "email": "sales@techsupplies.com"
+        },
         "type": "digital",
         "download_size": 350
-    },
-    {
-        "id": "P100",
-        "name": "Guitar",
-        "price": 350.0,
-        "stock": 10,
-        "type": "physical",
-        "weight": 4.5
-    },
-    {
-        "id": "D100",
-        "name": "Operating System",
-        "price": 199.99,
-        "stock": 100,
-        "type": "digital",
-        "download_size": 5200.0
     }
 ]
