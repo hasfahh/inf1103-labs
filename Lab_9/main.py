@@ -13,7 +13,6 @@ from input_helpers import (get_positive_float, get_non_negative_int,
                            get_positive_int)
 
 
-
 def get_or_create_supplier(suppliers: dict[str, Supplier], supplier_id: str,
                            name: str, contact_email: str) -> Supplier:
     if supplier_id not in suppliers:
@@ -185,7 +184,7 @@ while True:
 
     elif option == "3":
         product_id = input("Enter Product ID: ")
-        quantity = int(input("New Stock Quantity: "))
+        quantity = get_non_negative_int("New Stock Quantity: ")
         inventory.update_stock(product_id, quantity)
 
     elif option == "4":

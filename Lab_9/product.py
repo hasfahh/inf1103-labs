@@ -13,10 +13,6 @@ class Product(ABC):
             raise ValueError("Stock quantity cannot be negative.")
 
         self.__product_id: str = product_id
-
-    def __init__(self, product_id: str, name: str, price: float,
-                 stock: int, supplier: Supplier) -> None:
-        self.__product_id: str = product_id
         self.__name: str = name
         self.__price: float = price
         self.__stock: int = stock
